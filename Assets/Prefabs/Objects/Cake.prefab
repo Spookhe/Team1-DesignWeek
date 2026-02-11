@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 109670372613866430}
   - component: {fileID: 3335999385676556868}
-  - component: {fileID: 4679874716957537766}
+  - component: {fileID: 6682757742032119263}
   - component: {fileID: -6134525223594158061}
   m_Layer: 0
   m_Name: Cake
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4679874716957537766
+--- !u!114 &6682757742032119263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,9 +98,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5530996143192915284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cffadee0047f4de419a3007ca0fc1782, type: 3}
+  m_Script: {fileID: 11500000, guid: bee94d8c8cd311a499ff0cafdc7dbdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Team1: 0
   foodRating: 10
 --- !u!61 &-6134525223594158061
 BoxCollider2D:

@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class CakeScript : MonoBehaviour
+public class CakeScript1 : MonoBehaviour
 {
+
+    public bool Team1; 
+
     public int foodRating = 10;
 
     void OnTriggerEnter2D(Collider2D collider)
