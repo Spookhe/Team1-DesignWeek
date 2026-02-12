@@ -1445,9 +1445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac6985b3d209cf4cade7c32491a5911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readyCounterTextLeft: {fileID: 0}
+  readyCounterTextLeft: {fileID: 1541731711}
   countdownTextLeft: {fileID: 0}
-  readyCounterTextRight: {fileID: 0}
+  readyCounterTextRight: {fileID: 2025027552}
   countdownTextRight: {fileID: 0}
   gameSceneName: GameScene
 --- !u!4 &857957329

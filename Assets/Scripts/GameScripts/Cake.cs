@@ -1,17 +1,21 @@
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Cake : MonoBehaviour
 {
     [Header("Health Settings")]
     [SerializeField] private int maxHealth = 50;
     [SerializeField] private int currentHealth;
+    
+    public Slider healthBar;
 
     [Header("Stage Prefabs (Stage1 to Stage5)")]
     [SerializeField] private GameObject[] stagePrefabs;
 
     private int currentStageIndex = -1;
     private GameObject currentStageInstance;
+
 
     public int CurrentHealth
     {
@@ -26,6 +30,8 @@ public class Cake : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.maxValue = maxHealth;
+        healthBar.value = currentHealth;
         SpawnStage(0);
     }
 
@@ -62,7 +68,9 @@ public class Cake : MonoBehaviour
         int previousHealth = currentHealth;
 
         currentHealth -= amount;
+        healthBar.value = currentHealth;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
 
         int newStageIndex = Mathf.Clamp(
             (maxHealth - currentHealth) / 10,

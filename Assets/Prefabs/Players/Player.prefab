@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   jumpForce: 7
+  jumpCooldown: 1
   playerNumber: 0
   playerThrow: {fileID: 1218110836488085910}
 --- !u!50 &4028398826975320472

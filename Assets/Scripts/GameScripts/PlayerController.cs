@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
+    public float jumpCooldown = 1f;
+
+    static bool canJump = true;
+    
 
     private Rigidbody2D rb;
     private PlayerInput playerInput;
@@ -29,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (playerInput == null) return;
 
         // Jump input
-        if (jumpAction != null && jumpAction.WasPressedThisFrame())
+        if (jumpAction != null && jumpAction.WasPressedThisFrame() && canJump == true)
         {
             doJump = true;
         }
@@ -46,6 +51,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 doJump = false;
+                StartCoroutine(CoolDownFunction());
             }
         }
     }
@@ -67,5 +73,12 @@ public class PlayerController : MonoBehaviour
     public void AssignPlayerNumber(int num)
     {
         playerNumber = num;
+    }
+
+    IEnumerator CoolDownFunction()
+    {
+        canJump = false;
+        yield return new WaitForSeconds(jumpCooldown);
+        canJump = true;
     }
 }

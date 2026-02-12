@@ -46,6 +46,8 @@ public class CakeManager : MonoBehaviour
             return;
         }
 
+
+
         // Countdown timer
         timer -= Time.unscaledDeltaTime;
         if (timer < 0f) timer = 0f;
