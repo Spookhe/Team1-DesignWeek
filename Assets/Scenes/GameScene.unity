@@ -875,15 +875,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 18.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9417999
+      objectReference: {fileID: 0}
+    - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2369602
       objectReference: {fileID: 0}
     - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.28
+      value: 28.882
       objectReference: {fileID: 0}
     - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9
+      value: -8.1084
       objectReference: {fileID: 0}
     - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -918,16 +934,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1640072851129146725, guid: 27cb67ca4ccd91343a1beff18d5a9c5d, type: 3}
+    - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Color.r
-      value: 0.7937579
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4679874716957537766, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: cakeStages.Array.size
@@ -1297,13 +1317,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_Size.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 18.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -6134525223594158061, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9501599
+      objectReference: {fileID: 0}
+    - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2616
+      objectReference: {fileID: 0}
     - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.31
+      value: -28.46
       objectReference: {fileID: 0}
     - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.03
+      value: -8.54
       objectReference: {fileID: 0}
     - target: {fileID: 109670372613866430, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1338,16 +1382,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1640072851129146725, guid: 27cb67ca4ccd91343a1beff18d5a9c5d, type: 3}
+    - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335999385676556868, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: m_Color.r
-      value: 0.7937579
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4679874716957537766, guid: ae24073559e2a9740af241a9280de6a7, type: 3}
       propertyPath: cakeStages.Array.size
@@ -1712,6 +1760,7 @@ MonoBehaviour:
   - {fileID: 1992810673393010250, guid: 7235271957f1a6b46ac3fcb257cff1f0, type: 3}
   - {fileID: 6241308227418312283, guid: 6603a85615cdd8d4781248e9ea63a839, type: 3}
   spawnInterval: 2
+  deadzone: 55
   leftSpawn: {x: -8, y: 1}
   rightSpawn: {x: 8, y: 1}
 --- !u!4 &922824543
@@ -2471,7 +2520,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -100
   m_Sprite: {fileID: -7647299410277095090, guid: d4c21692c76f9494382db91e344109b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

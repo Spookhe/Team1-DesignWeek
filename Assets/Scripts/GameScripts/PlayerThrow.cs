@@ -82,7 +82,7 @@ public class PlayerThrow : MonoBehaviour
         // IMPORTANT: Team-based direction
         Vector2 horizontalDir = (team == Team.Left) ? Vector2.right : Vector2.left;
 
-        float angle = 55f;
+        float angle = 25f;
         float power = throwForce * 0.9f;
 
         float rad = angle * Mathf.Deg2Rad;
@@ -94,7 +94,7 @@ public class PlayerThrow : MonoBehaviour
 
         heldRb.linearVelocity = launchVelocity;
 
-        Debug.Log($"{gameObject.name}: ARC THROW 55° (reduced power)");
+        Debug.Log($"{gameObject.name}: ARC THROW 55ï¿½ (reduced power)");
 
         heldOrb = null;
         heldRb = null;

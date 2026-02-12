@@ -101,7 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cffadee0047f4de419a3007ca0fc1782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodRating: 10
+  maxHealth: 50
+  currentHealth: 0
+  stagePrefabs: []
 --- !u!61 &-6134525223594158061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,5 +148,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19, y: 4}
   m_EdgeRadius: 0

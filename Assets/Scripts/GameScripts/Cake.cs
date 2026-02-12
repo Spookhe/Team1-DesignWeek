@@ -45,6 +45,13 @@ public class Cake : MonoBehaviour
         Invoke(nameof(ResetDamageLock), 0f);
     }
 
+    private void CollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Console.WriteLine("Player officially hit the cake");
+        }
+    }
     private void ResetDamageLock()
     {
         canTakeDamage = true;
