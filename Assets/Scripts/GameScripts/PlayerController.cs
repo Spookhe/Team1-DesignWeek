@@ -50,9 +50,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // -----------------------------
-    // Called externally to assign input
-    // -----------------------------
     public void AssignPlayerInput(PlayerInput input)
     {
         playerInput = input;

@@ -6,8 +6,8 @@ public class PlayerThrow : MonoBehaviour
     public enum Team { Left, Right }
 
     [Header("Throw Settings")]
-    public float throwForce = 20f;
-    public float throwArcForce = 5f;
+    public float throwForce = 10f;      // Horizontal power
+    public float throwArcForce = 8f;    // Vertical arc strength
 
     [Header("Player Info")]
     public Team team; // Assigned during spawn
@@ -17,6 +17,7 @@ public class PlayerThrow : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction attackAction;
+
 
     public void AssignPlayerInput(PlayerInput input)
     {
@@ -29,6 +30,7 @@ public class PlayerThrow : MonoBehaviour
             Debug.LogError($"{gameObject.name}: Attack action NOT found!");
     }
 
+
     private void Update()
     {
         if (playerInput == null || attackAction == null) return;
@@ -40,6 +42,7 @@ public class PlayerThrow : MonoBehaviour
         }
     }
 
+ 
     public bool HasOrb() => heldOrb != null;
 
     public void PickupOrb(GameObject orb)
@@ -49,19 +52,23 @@ public class PlayerThrow : MonoBehaviour
         heldOrb = orb;
         heldRb = orb.GetComponent<Rigidbody2D>();
 
+        // Disable floating motion
         var mover = orb.GetComponent<ZigZagOrbMover>();
         if (mover != null) mover.enabled = false;
 
+        // Attach to player
         orb.transform.parent = transform;
         orb.transform.localPosition = new Vector3(0f, 1f, 0f);
 
+        // Disable physics while held
+        heldRb.bodyType = RigidbodyType2D.Kinematic;
         heldRb.gravityScale = 0f;
         heldRb.linearVelocity = Vector2.zero;
         heldRb.angularVelocity = 0f;
-        heldRb.bodyType = RigidbodyType2D.Kinematic;
 
         Debug.Log($"{gameObject.name}: Orb picked up!");
     }
+
 
     public void ThrowOrb()
     {
@@ -71,19 +78,27 @@ public class PlayerThrow : MonoBehaviour
 
         heldRb.bodyType = RigidbodyType2D.Dynamic;
         heldRb.gravityScale = 1f;
-        heldRb.linearVelocity = Vector2.zero;
 
-        // Determine throw direction based on team
+        // IMPORTANT: Team-based direction
         Vector2 horizontalDir = (team == Team.Left) ? Vector2.right : Vector2.left;
 
-        Vector2 throwDir = horizontalDir + Vector2.up * (throwArcForce / throwForce);
+        float angle = 25f;
+        float power = throwForce * 0.9f;
 
-        heldRb.AddForce(throwDir.normalized * throwForce, ForceMode2D.Impulse);
+        float rad = angle * Mathf.Deg2Rad;
 
-        Debug.Log($"{gameObject.name}: Throwing {(horizontalDir == Vector2.right ? "RIGHT" : "LEFT")}");
-        Debug.Log($"{gameObject.name}: Orb thrown!");
+        Vector2 launchVelocity = new Vector2(
+            Mathf.Cos(rad) * power * horizontalDir.x,
+            Mathf.Sin(rad) * power
+        );
+
+        heldRb.linearVelocity = launchVelocity;
+
+        Debug.Log($"{gameObject.name}: ARC THROW 55� (reduced power)");
 
         heldOrb = null;
         heldRb = null;
     }
+
+
 }
