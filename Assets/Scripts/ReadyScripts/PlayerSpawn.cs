@@ -14,18 +14,12 @@ public class PlayerSpawn : MonoBehaviour
         PlayerInputManager.instance.onPlayerJoined += OnPlayerJoined;
     }
 
-    /*private void OnDisable()
-    {
-        PlayerInputManager.instance.onPlayerJoined -= OnPlayerJoined;
-    }*/
 
     private void OnPlayerJoined(PlayerInput player)
     {
         int index = player.playerIndex;
 
-        // -------------------------
-        // Spawn position
-        // -------------------------
+
         if (index % 2 == 0) // Left Team
         {
             if (leftIndex < leftTeamSpawnPoints.Length)
@@ -43,22 +37,18 @@ public class PlayerSpawn : MonoBehaviour
             }
         }
 
-        // Rename player in hierarchy
+
         player.gameObject.name = $"Player {index + 1}";
 
-        // -------------------------
-        // Initialize PlayerController
-        // -------------------------
+
         PlayerController pc = player.GetComponent<PlayerController>();
         if (pc != null)
         {
-            pc.AssignPlayerInput(player);      // Assign this player's Input
-            pc.AssignPlayerNumber(index + 1);  // Optional: numbering starts at 1
+            pc.AssignPlayerInput(player);      
+            pc.AssignPlayerNumber(index + 1);  
         }
 
-        // -------------------------
-        // Initialize PlayerThrow
-        // -------------------------
+
         PlayerThrow pt = player.GetComponent<PlayerThrow>();
         if (pt != null)
         {

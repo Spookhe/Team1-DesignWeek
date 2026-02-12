@@ -37,7 +37,6 @@ public class Cursor : MonoBehaviour
             return;
         }
 
-        // Editor camera references
         if (leftCamera == null || rightCamera == null)
         {
             Debug.LogError($"{name}: Left and/or Right Camera not assigned on prefab.");
